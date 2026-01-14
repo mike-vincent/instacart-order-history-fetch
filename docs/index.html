@@ -146,43 +146,44 @@ chmod +x instacart-order-history-download</code></pre>
 
     <script>
     function copyMarkdown() {
-        const md = `# instacart-order-history-download
-
-A command-line tool to download your Instacart order history.
-
-## Download Your Instacart Receipts
-
-\`\`\`
-instacart-order-history-download \\
-  --instacart-session-id "YOUR_SESSION_ID"
-\`\`\`
-
-## Find Your Instacart Session ID
-
-Log into instacart.com, open your browser DevTools, go to Cookies, and copy the value of \`_instacart_session_id\`.
-
-## Homebrew
-
-\`\`\`
-brew tap mike-vincent/instacart-order-history-download
-brew install instacart-order-history-download
-\`\`\`
-
-## MacPorts
-
-\`\`\`
-sudo port install instacart-order-history-download
-\`\`\`
-
-## Build from source
-
-\`\`\`
-git clone https://github.com/mike-vincent/instacart-order-history-download.git
-cd instacart-order-history-download
-chmod +x instacart-order-history-download
-\`\`\`
-`;
-        navigator.clipboard.writeText(md);
+        const lines = [
+            '# instacart-order-history-download',
+            '',
+            'A command-line tool to download your Instacart order history.',
+            '',
+            '## Download Your Instacart Receipts',
+            '',
+            '```',
+            'instacart-order-history-download \\',
+            '  --instacart-session-id "YOUR_SESSION_ID"',
+            '```',
+            '',
+            '## Find Your Instacart Session ID',
+            '',
+            'Log into instacart.com, open your browser DevTools, go to Cookies, and copy the value of `_instacart_session_id`.',
+            '',
+            '## Homebrew',
+            '',
+            '```',
+            'brew tap mike-vincent/instacart-order-history-download',
+            'brew install instacart-order-history-download',
+            '```',
+            '',
+            '## MacPorts',
+            '',
+            '```',
+            'sudo port install instacart-order-history-download',
+            '```',
+            '',
+            '## Build from source',
+            '',
+            '```',
+            'git clone https://github.com/mike-vincent/instacart-order-history-download.git',
+            'cd instacart-order-history-download',
+            'chmod +x instacart-order-history-download',
+            '```'
+        ];
+        navigator.clipboard.writeText(lines.join('\n'));
         const btn = document.querySelector('.copy-btn');
         btn.textContent = 'Copied!';
         setTimeout(() => btn.textContent = 'Copy Markdown', 1500);
