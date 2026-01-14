@@ -148,13 +148,18 @@ brew install instacart-order-history-fetch</code></pre>
     <section>
         <h2>What are some instacart-order-history-fetch example commands?</h2>
         <pre><code># Fetch all orders as JSON
-instacart-order-history-fetch --instacart-session-id "abc123..."
+instacart-order-history-fetch \
+  --instacart-session-id "abc123..."
 
 # Fetch last 6 months to CSV
-instacart-order-history-fetch --instacart-session-id "abc123..." --months 6 -f csv
+instacart-order-history-fetch \
+  --instacart-session-id "abc123..." \
+  --months 6 -f csv
 
 # Fetch to file
-instacart-order-history-fetch --instacart-session-id "abc123..." -o orders.json</code></pre>
+instacart-order-history-fetch \
+  --instacart-session-id "abc123..." \
+  -o orders.json</code></pre>
     </section>
 
     <div class="footer">
