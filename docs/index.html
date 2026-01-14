@@ -106,16 +106,17 @@
 <body>
     <button class="copy-btn" onclick="copyMarkdown()">Copy Markdown</button>
     <h1>instacart-order-history-download</h1>
-    <p style="margin-top:-24px;margin-bottom:16px;">A command-line tool to download your Instacart order history.</p>
-    <p style="margin-bottom:32px;color:var(--muted);font-family:'SF Mono',Menlo,Monaco,monospace;font-size:14px;">## Download Your Instacart Receipts</p>
-
-    <pre><code>instacart-order-history-download \
-  --instacart-session-id "WlhsS05XTXpTVzFrVjFaNlRETkNkR0ZKUW5OaFYwNXNZM2xCYVZwWVNqLS1LUlZ5UHVaUXVkbzZ2dEpsU29qU2ZnPT0tLTQ4MTY1YmM1N2ZhYmUwZWU1MGYxZDAxNjIxMTM2ZGExOTZmOGYyYTE="</code></pre>
-
+    <p style="margin-top:-24px;margin-bottom:32px;">A command-line tool to download your Instacart order history.</p>
 
     <section>
         <h2>## Find Your Instacart Session ID</h2>
         <p>Log into instacart.com, open your browser DevTools, go to Cookies, and copy the value of <code>_instacart_session_id</code>.</p>
+    </section>
+
+    <section>
+        <h2>## Download Your Instacart Receipts</h2>
+        <pre><code>instacart-order-history-download \
+  --instacart-session-id "VG9rZW5FeGFtcGxlQmFzZTY0RW5jb2RlZFNlc3Npb25JZC0tYWJjMTIzZGVmNDU2Z2hpNzg5PT0tLTEyMzQ1Njc4OWFiY2RlZjAxMjM0NTY3ODlhYmNkZWYwMTIzNDU2Nzg5YWJjZGVm"</code></pre>
     </section>
 
 
@@ -151,16 +152,16 @@ chmod +x instacart-order-history-download</code></pre>
             '',
             'A command-line tool to download your Instacart order history.',
             '',
+            '## Find Your Instacart Session ID',
+            '',
+            'Log into instacart.com, open your browser DevTools, go to Cookies, and copy the value of `_instacart_session_id`.',
+            '',
             '## Download Your Instacart Receipts',
             '',
             '```',
             'instacart-order-history-download \\',
             '  --instacart-session-id "YOUR_SESSION_ID"',
             '```',
-            '',
-            '## Find Your Instacart Session ID',
-            '',
-            'Log into instacart.com, open your browser DevTools, go to Cookies, and copy the value of `_instacart_session_id`.',
             '',
             '## Homebrew',
             '',
