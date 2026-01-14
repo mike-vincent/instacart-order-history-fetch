@@ -1,12 +1,12 @@
-# instacart-order-history
+# instacart-order-history-fetch
 
-instacart-order-history is a command-line tool for exporting your Instacart order history.
+instacart-order-history-fetch is a command-line tool for exporting your Instacart order history.
 
 ## Install
 
 ```bash
-brew tap mike-vincent/instacart-order-history
-brew install instacart-order-history
+brew tap mike-vincent/instacart-order-history-fetch
+brew install instacart-order-history-fetch
 ```
 
 ## Get your session cookie
@@ -18,8 +18,8 @@ brew install instacart-order-history
 ## Usage
 
 ```bash
-instacart-order-history --instacart-session-id "YOUR_SESSION_ID"
-instacart-order-history --instacart-session-id "YOUR_SESSION_ID" --months 6 -f csv -o orders.csv
+instacart-order-history-fetch --instacart-session-id "YOUR_SESSION_ID"
+instacart-order-history-fetch --instacart-session-id "YOUR_SESSION_ID" --months 6 -f csv -o orders.csv
 ```
 
 ## Options

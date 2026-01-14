@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>instacart-order-history</title>
+    <title>instacart-order-history-fetch</title>
     <style>
         :root {
             --bg: #fafafa;
@@ -108,45 +108,45 @@
     </style>
 </head>
 <body>
-    <h1>instacart-order-history</h1>
-    <p style="margin-top:-24px;margin-bottom:32px;">instacart-order-history is a command-line tool for exporting your Instacart order history.</p>
+    <h1>instacart-order-history-fetch</h1>
+    <p style="margin-top:-24px;margin-bottom:32px;">instacart-order-history-fetch is a command-line tool for exporting your Instacart order history.</p>
 
     <section>
-        <h2>What does instacart-order-history do?</h2>
-        <p>instacart-order-history exports your Instacart order history to JSON, CSV, or text. instacart-order-history outputs order dates, totals, retailers, and full item details.</p>
+        <h2>What does instacart-order-history-fetch do?</h2>
+        <p>instacart-order-history-fetch exports your Instacart order history to JSON, CSV, or text. instacart-order-history-fetch outputs order dates, totals, retailers, and full item details.</p>
     </section>
 
     <hr>
 
     <section>
-        <h2>How do I install instacart-order-history?</h2>
-        <p>You install instacart-order-history with Homebrew:</p>
-        <pre><code>brew tap mike-vincent/instacart-order-history
-brew install instacart-order-history</code></pre>
+        <h2>How do I install instacart-order-history-fetch?</h2>
+        <p>You install instacart-order-history-fetch with Homebrew:</p>
+        <pre><code>brew tap mike-vincent/instacart-order-history-fetch
+brew install instacart-order-history-fetch</code></pre>
     </section>
 
     <hr>
 
     <section>
-        <h2>How do I use instacart-order-history?</h2>
-        <p>You use instacart-order-history by running it with your session cookie. Log into instacart.com, open your browser DevTools, go to Application → Cookies, and copy the value of <code>_instacart_session_id</code>. It looks like this:</p>
+        <h2>How do I use instacart-order-history-fetch?</h2>
+        <p>You use instacart-order-history-fetch by running it with your session cookie. Log into instacart.com, open your browser DevTools, go to Application → Cookies, and copy the value of <code>_instacart_session_id</code>. It looks like this:</p>
         <pre><code>WlhsS05XTXpTVzFrVjFaNlRETkNkR0ZKUW5OaFYwNXNZM2xCYVZwWVNq...</code></pre>
         <p>Then run:</p>
-        <pre><code>instacart-order-history --instacart-session-id "WlhsS05XTXpTVzFr..."</code></pre>
+        <pre><code>instacart-order-history-fetch --instacart-session-id "WlhsS05XTXpTVzFr..."</code></pre>
     </section>
 
     <hr>
 
     <section>
-        <h2>What are some instacart-order-history example commands?</h2>
+        <h2>What are some instacart-order-history-fetch example commands?</h2>
         <pre><code># Export all orders as JSON
-instacart-order-history --instacart-session-id "abc123..."
+instacart-order-history-fetch --instacart-session-id "abc123..."
 
 # Export last 6 months to CSV
-instacart-order-history --instacart-session-id "abc123..." --months 6 -f csv
+instacart-order-history-fetch --instacart-session-id "abc123..." --months 6 -f csv
 
 # Export to file
-instacart-order-history --instacart-session-id "abc123..." -o orders.json</code></pre>
+instacart-order-history-fetch --instacart-session-id "abc123..." -o orders.json</code></pre>
     </section>
 
     <div class="footer">
