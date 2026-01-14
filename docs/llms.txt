@@ -1,30 +1,51 @@
 # instacart-orders
 
-> Export your Instacart order history to JSON, CSV, or text.
+## What does instacart-orders do?
 
-## Install
+instacart-orders exports your Instacart order history to JSON, CSV, or text. instacart-orders outputs order dates, totals, retailers, and full item details.
+
+## How do I install instacart-orders?
+
+Install instacart-orders with Homebrew:
 
 ```
 brew tap mike-vincent/instacart-order-history-scraper
 brew install instacart-orders
 ```
 
-## Usage
+## How do I get my session cookie?
+
+Get the session cookie from your browser. Log into instacart.com, open DevTools, go to Application → Cookies, and copy the value of `_instacart_session_id`.
+
+## How do I use instacart-orders?
+
+Run instacart-orders with your session cookie:
 
 ```
-instacart-orders --session "SESSION_COOKIE"
-instacart-orders --session "COOKIE" --months 6 --format csv
+instacart-orders -s "YOUR_COOKIE"
 ```
 
-## Options
+## Examples
 
-- `--session, -s` - Instacart session cookie (required)
-- `--months N` - Last N months
-- `--days N` - Last N days
-- `--since YYYY-MM-DD` - Since date
-- `--format json|csv|text` - Output format
-- `-o FILE` - Output file
-- `-q` - Quiet mode
+```
+# Export all orders as JSON
+instacart-orders -s "COOKIE"
+
+# Last 6 months as CSV
+instacart-orders -s "COOKIE" --months 6 -f csv
+
+# Last 30 days to a file
+instacart-orders -s "COOKIE" --days 30 -o orders.json
+
+# Since January 2024
+instacart-orders -s "COOKIE" --since 2024-01-01
+
+# Human-readable text output
+instacart-orders -s "COOKIE" -f text
+
+# Quiet mode (no progress output)
+instacart-orders -s "COOKIE" -q > orders.json
+```
 
 ## Author
 
