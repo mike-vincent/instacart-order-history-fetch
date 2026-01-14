@@ -1,5 +1,5 @@
+dist/
+build/
+*.egg-info/
 __pycache__/
-*.py[cod]
-*.json
-*.csv
-.env
+*.pyc

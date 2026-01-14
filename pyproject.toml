@@ -7,7 +7,7 @@ name = "instacart-order-history-download"
 version = "1.0.0"
 description = "A command-line tool to download your Instacart order history"
 readme = "README.md"
-license = {text = "GPL-3.0"}
+license = "GPL-3.0-only"
 authors = [
     {name = "Mike Vincent", email = "michael.thomas.vincent@gmail.com"}
 ]
@@ -16,7 +16,6 @@ classifiers = [
     "Development Status :: 5 - Production/Stable",
     "Environment :: Console",
     "Intended Audience :: End Users/Desktop",
-    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
     "Operating System :: OS Independent",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.8",
@@ -35,3 +34,6 @@ instacart-order-history-download = "instacart_order_history_download:main"
 Homepage = "https://mike-vincent.github.io/instacart-order-history-download"
 Repository = "https://github.com/mike-vincent/instacart-order-history-download"
 Issues = "https://github.com/mike-vincent/instacart-order-history-download/issues"
+
+[tool.setuptools]
+py-modules = ["instacart_order_history_download"]
