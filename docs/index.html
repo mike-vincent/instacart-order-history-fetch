@@ -109,7 +109,7 @@
 </head>
 <body>
     <h1>instacart-scraper</h1>
-    <p style="margin-top:-24px;margin-bottom:32px;">A command-line tool for scraping your Instacart order history.</p>
+    <p style="margin-top:-24px;margin-bottom:32px;">instacart-scraper is a command-line tool for exporting your Instacart order history.</p>
 
     <section>
         <h2>What does instacart-scraper do?</h2>
@@ -143,24 +143,27 @@ brew install instacart-scraper</code></pre>
     <hr>
 
     <section>
-        <h2>Examples</h2>
-        <pre><code># Export all orders as JSON
-instacart-scraper --isid "YOUR_SESSION_ID"
+        <h2>What are some instacart-scraper example commands?</h2>
+        <pre><code># Export all orders as JSON (default)
+instacart-scraper --isid "abc123..."
 
-# Last 6 months as CSV
-instacart-scraper --isid "YOUR_SESSION_ID" --months 6 -f csv
+# Export last 6 months to CSV file
+instacart-scraper --isid "abc123..." --months 6 -f csv -o groceries.csv
 
-# Last 30 days to a file
-instacart-scraper --isid "YOUR_SESSION_ID" --days 30 -o orders.json
+# Export last 30 days as JSON
+instacart-scraper --isid "abc123..." --days 30
 
-# Since January 2024
-instacart-scraper --isid "YOUR_SESSION_ID" --since 2024-01-01
+# Export orders since a specific date
+instacart-scraper --isid "abc123..." --since 2025-01-01
 
-# Human-readable text output
-instacart-scraper --isid "YOUR_SESSION_ID" -f text
+# Export as human-readable text
+instacart-scraper --isid "abc123..." -f text
 
-# Quiet mode (no progress output)
-instacart-scraper --isid "YOUR_SESSION_ID" -q > orders.json</code></pre>
+# Export quietly (no progress) and pipe to jq
+instacart-scraper --isid "abc123..." -q | jq '.[0]'
+
+# Save all orders to file
+instacart-scraper --isid "abc123..." -o all-orders.json</code></pre>
     </section>
 
     <div class="footer">

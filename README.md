@@ -1,6 +1,6 @@
 # instacart-scraper
 
-Instacart Scraper is a command-line tool for exporting your Instacart order history.
+instacart-scraper is a command-line tool for exporting your Instacart order history.
 
 ## Install
 
