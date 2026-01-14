@@ -18,14 +18,14 @@ brew install instacart-order-history
 ## Usage
 
 ```bash
-instacart-order-history --isid "YOUR_SESSION_ID"
-instacart-order-history --isid "YOUR_SESSION_ID" --months 6 -f csv -o orders.csv
+instacart-order-history --session-id "YOUR_SESSION_ID"
+instacart-order-history --session-id "YOUR_SESSION_ID" --months 6 -f csv -o orders.csv
 ```
 
 ## Options
 
 ```
---isid, --instacart-session-id     Your _instacart_session_id cookie (required)
+--session-id, --session-id     Your _instacart_session_id cookie (required)
 --months N       Last N months
 --days N         Last N days
 --since DATE     Since YYYY-MM-DD
